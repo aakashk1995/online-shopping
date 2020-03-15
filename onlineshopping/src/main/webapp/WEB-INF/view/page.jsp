@@ -22,7 +22,10 @@
 
   <!-- Bootstrap core CSS -->
   <link href="${css}/bootstrap.min.css" rel="stylesheet">
-
+<%-- 
+<!-- Bootstrap Readable Theme -->
+<link href="${css}/bootstrap-readable-theme.css" rel="stylesheet">
+ --%>
   <!-- Custom styles for this template -->
   <link href="${css}/shop-homepage.css" rel="stylesheet">
 <script>
@@ -35,11 +38,12 @@
 </head>
 
 <body>
-
+<div class="wrapper">
 <!-- Navigation -->
 		<%@include file="./shared/navbar.jsp" %>
 
   <!-- Page Content -->
+  <div class="content">
   <c:if test="${userClickHome == true }">
 		<%@include file="home.jsp"%>
  </c:if>
@@ -51,14 +55,19 @@
 	<!-- Load only when user clicks contact -->
 			<c:if test="${userClickContact == true }">
 				<%@include file="contact.jsp"%>
-			</c:if>		
+			</c:if>	
+	
+	</div>			
   <!-- Footer comes here -->
+ 
 		<%@include file="./shared/footer.jsp"%>
 
   <!-- Bootstrap core JavaScript -->
   <script src="${js}/jquery.min.js"></script>
 
 <script src="${js}/myapp.js"></script>
+
+</div>
 </body>
 
 </html>
